@@ -15,6 +15,7 @@
                             <p class="card-text"><strong>Series:</strong> {{ $comic->series }}</p>
                             <p class="card-text"><strong>Sale Date:</strong> {{ $comic->sale_date }}</p>
                             <p class="card-text"><strong>Type:</strong> {{ $comic->type }}</p>
+                            <a href="{{ route('comics.show', $comic->id) }}" class="btn btn-primary btn-block mt-3">Apri comic</a>
                         </div>
                     </div>
                 </div>
