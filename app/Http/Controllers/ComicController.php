@@ -100,7 +100,7 @@ class ComicController extends Controller
         $formData =$request->all();
         $comic = Comic::findOrFail($id);
         $comic->update($formData);
-
+        return redirect()->route('comics.show',['comic' => $comic->id]);
     }
 
     /**

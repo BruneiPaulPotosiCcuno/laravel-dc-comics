@@ -16,6 +16,7 @@
                             <p class="card-text"><strong>Sale Date:</strong> {{ $comic->sale_date }}</p>
                             <p class="card-text"><strong>Type:</strong> {{ $comic->type }}</p>
                             <a href="{{ route('comics.show', $comic->id) }}" class="btn btn-primary btn-block mt-3">Apri comic</a>
+                            <a href="{{ route('comics.edit', $comic->id) }}" class="btn btn-secondary btn-block mt-2">Modifica comic</a>
                         </div>
                     </div>
                 </div>
