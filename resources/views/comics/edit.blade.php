@@ -3,7 +3,7 @@
 @section('content')
 <div class="container mt-5">
     <h2 class="mb-4 text-center">Modificare il fumetto: {{ $comic->title }}</h2>
-    <form action="{{ route('comics.update', $comic->id) }}" method="POST" class="bg-light p-5 rounded shadow-sm">
+    <form action="{{ route('comics.update',['comic' => $comic->id] ) }}" method="POST" class="bg-light p-5 rounded shadow-sm">
         @csrf
         @method('PUT')
         <div class="mb-3">
