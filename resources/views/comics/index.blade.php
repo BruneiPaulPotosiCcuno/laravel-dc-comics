@@ -2,7 +2,7 @@
 
 @section('content')
     <div class="container">
-        <h2 class="text-center mb-4">I fumetti da mostrare</h2>
+        <h2 class="text-center mb-4">COMICS LIST</h2>
         <div class="row row-cols-1 row-cols-md-3 g-4">
             @foreach ($comics as $comic)
             <div class="col">
@@ -15,8 +15,11 @@
                             <p class="card-text"><strong>Series:</strong> {{ $comic->series }}</p>
                             <p class="card-text"><strong>Sale Date:</strong> {{ $comic->sale_date }}</p>
                             <p class="card-text"><strong>Type:</strong> {{ $comic->type }}</p>
-                            <a href="{{ route('comics.show', $comic->id) }}" class="btn btn-primary btn-block mt-3">Apri comic</a>
-                            <a href="{{ route('comics.edit', $comic->id) }}" class="btn btn-secondary btn-block mt-2">Modifica comic</a>
+                            <div class="d-flex justify-content-center justify-content-around">
+                                <a href="{{ route('comics.show', $comic->id) }}" class="btn btn-primary btn-block mt-4">Apri comic</a>
+                                <a href="{{ route('comics.edit', $comic->id) }}" class="btn btn-secondary btn-block mt-4">Modifica comic</a>
+                            </div>
+
                         </div>
                     </div>
                 </div>
