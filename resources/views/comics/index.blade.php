@@ -19,6 +19,13 @@
                                 <a href="{{ route('comics.show', $comic->id) }}" class="btn btn-primary btn-block mt-4">Apri comic</a>
                                 <a href="{{ route('comics.edit', $comic->id) }}" class="btn btn-secondary btn-block mt-4">Modifica comic</a>
                             </div>
+                            <div class="d-flex justify-content-center justify-content-around">
+                                <form action="{{ route('comics.destroy', $comic->id) }}" method="POST">
+                                    @csrf
+                                    @method('DELETE')
+                                    <button class="btn btn-danger btn-block mt-4" type="submit">Elimina</button>
+                                </form>
+                            </div>
 
                         </div>
                     </div>
